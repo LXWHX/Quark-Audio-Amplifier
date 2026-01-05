@@ -107,6 +107,33 @@
             border-top: 1px solid var(--hint-color);
             padding-top: 10px;
         }
+
+        /* 新增 Footer 样式 */
+        .footer {
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid var(--btn-bg);
+            font-size: 11px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-link {
+            color: var(--hint-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        .divider {
+            color: var(--btn-bg);
+        }
     </style>
 </head>
 <body>
@@ -125,7 +152,13 @@
     <button id="resetBtn" class="reset-btn" data-key="reset">Reset to 100%</button>
 
     <div class="hint" data-key="hint">若无效请刷新视频页面</div>
-    
+
+    <div class="footer">
+        <a href="https://github.com/LXWHX/Quark-Audio-Amplifier/issues" target="_blank" class="footer-link" data-key="feedback">反馈问题</a>
+        <span class="divider">|</span>
+        <a href="https://afdian.com/a/lxwhx" target="_blank" class="footer-link" data-key="donate">☕ 请我喝咖啡</a>
+    </div>
+
     <script src="popup.js"></script>
 </body>
 </html>

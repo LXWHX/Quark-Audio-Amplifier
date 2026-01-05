@@ -8,18 +8,22 @@ document.addEventListener('DOMContentLoaded', async () => {
   const body = document.body;
 
   // --- 0. 翻译字典 ---
-  const translations = {
+const translations = {
     zh: {
       title: "网页音量增强器",
       reset: "重置回 100%",
       hint: "若无效请刷新视频页面",
-      langBtn: "En" // 当前是中文，按钮显示"去英文"
+      langBtn: "En",
+      feedback: "问题反馈",  // 新增
+      donate: "☕ 支持作者"   // 新增
     },
     en: {
       title: "Web Volume Booster",
       reset: "Reset to 100%",
       hint: "Refresh page if ineffective",
-      langBtn: "中" // 当前是英文，按钮显示"去中文"
+      langBtn: "中",
+      feedback: "Feedback",     // 新增
+      donate: "☕ Buy me coffee" // 新增
     }
   };
 
