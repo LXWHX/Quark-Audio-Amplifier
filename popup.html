@@ -3,40 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --hint-color: #666666;
+            --accent-color: #007bff;
+            --btn-bg: #f0f0f0;
+            --btn-text: #333;
+            --btn-hover: #e0e0e0;
+        }
+
+        body.dark-mode {
+            --bg-color: #222222;
+            --text-color: #e0e0e0;
+            --hint-color: #aaaaaa;
+            --accent-color: #4dabf7;
+            --btn-bg: #333333;
+            --btn-text: #ffffff;
+            --btn-hover: #444444;
+        }
+
         body {
-            width: 220px;
+            width: 240px;
             padding: 15px;
             text-align: center;
             font-family: sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* 顶部布局：标题(左) + 按钮组(右) */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
         }
 
         h3 {
-            margin: 5px 0 15px;
+            margin: 0;
+            font-size: 16px;
+            /* 防止标题太长换行 */
+            white-space: nowrap; 
         }
 
-        input {
+        .controls {
+            display: flex;
+            gap: 8px; /* 按钮之间的间距 */
+        }
+
+        /* 通用小按钮样式 */
+        .icon-btn {
+            cursor: pointer;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            border: none;
+            font-size: 14px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 32px;
+        }
+        .icon-btn:hover {
+            background-color: var(--btn-hover);
+        }
+
+        input[type=range] {
             width: 100%;
+            cursor: pointer;
+            margin: 15px 0 5px;
         }
 
         .val {
-            font-size: 20px;
+            font-size: 24px;
             font-weight: bold;
-            color: #007bff;
-            margin-top: 10px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .reset-btn {
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            border: 1px solid var(--hint-color);
+            border-radius: 4px;
+            padding: 5px 15px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            transition: opacity 0.2s;
+            width: 100%; /* 让按钮宽一点更好点 */
+        }
+        .reset-btn:hover {
+            opacity: 0.8;
         }
 
         .hint {
-            font-size: 12px;
-            color: #666;
-            margin-top: 15px;
+            font-size: 11px;
+            color: var(--hint-color);
+            border-top: 1px solid var(--hint-color);
+            padding-top: 10px;
         }
     </style>
 </head>
 <body>
-    <h3>音量增强器</h3>
+    <div class="header">
+        <h3 data-key="title">网页音量增强器</h3>
+        
+        <div class="controls">
+            <button id="toggleLang" class="icon-btn">En</button>
+            <button id="toggleMode" class="icon-btn" title="Dark/Light">🌓</button>
+        </div>
+    </div>
+
     <input type="range" id="slider" min="0" max="600" value="100">
     <div class="val" id="val">100%</div>
-    <div class="hint">若无效请刷新视频页面</div>
+
+    <button id="resetBtn" class="reset-btn" data-key="reset">Reset to 100%</button>
+
+    <div class="hint" data-key="hint">若无效请刷新视频页面</div>
+    
     <script src="popup.js"></script>
 </body>
 </html>
