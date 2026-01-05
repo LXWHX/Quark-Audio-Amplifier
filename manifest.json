@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "网页音量增强器",
+  "name": "网页音量增强器 Web Volume Booster",
   "version": "3.4",
   "description": "最高600%音量增强，带记忆与防拥堵功能，语言切换，暗色模式",
   "permissions": [

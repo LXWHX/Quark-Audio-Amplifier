@@ -14,6 +14,7 @@ const translations = {
       reset: "重置回 100%",
       hint: "若无效请刷新视频页面",
       langBtn: "En",
+      privacy: "隐私声明",
       feedback: "问题反馈",  // 新增
       donate: "☕ 支持作者"   // 新增
     },
@@ -22,6 +23,7 @@ const translations = {
       reset: "Reset to 100%",
       hint: "Refresh page if ineffective",
       langBtn: "中",
+      privacy: "Privacy",
       feedback: "Feedback",     // 新增
       donate: "☕ Buy me coffee" // 新增
     }
