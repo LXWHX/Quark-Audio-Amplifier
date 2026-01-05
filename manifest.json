@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "夸克音量大师",
+  "version": "3.1",
+  "description": "带记忆功能的音量增强器",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "storage" 
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
