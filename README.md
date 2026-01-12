@@ -4,6 +4,9 @@
 
 核心功能： 🔊 600% 强力增强：平滑调节音量增益，最高可达 600%，显著提升音量。 🧠 智能记忆：自动记住您在每个标签页设定的音量，刷新页面无需重复调整。 🛡️ 防爆音保护：内置鲁棒性检测，防止音频流拥堵或爆音，保护您的听力与设备。 🌓 个性化体验：完美支持深色模式（Dark Mode），提供中英双语界面。
 
+![image](https://github.com/LXWHX/Quark-Audio-Amplifier/blob/main/chn.png)
+![image](https://github.com/LXWHX/Quark-Audio-Amplifier/blob/main/eng.png)
+
 适用场景：
 
 观看音量过小的在线网课、教学视频。
